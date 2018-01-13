@@ -1,1 +1,1 @@
-Name: James Daniel - Onid: danielj
+This is my assignment-1 submission!
