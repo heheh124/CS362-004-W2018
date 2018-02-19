@@ -1,0 +1,95 @@
+        -:    0:Source:randomtestcard1.c
+        -:    0:Graph:randomtestcard1.gcno
+        -:    0:Data:randomtestcard1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:/**************************** 
+        -:    2:Author: James Daniel
+        -:    3:Assignment #4 
+        -:    4:Random test for Smithy
+        -:    5:****************************/
+        -:    6:
+        -:    7:#include <stdio.h>
+        -:    8:#include <math.h>
+        -:    9:#include <stdlib.h>
+        -:   10:#include <assert.h>
+        -:   11:#include "dominion.h"
+        -:   12:#include "dominion_helpers.h"
+        -:   13:#include "rngs.h"
+        -:   14:#define NUM_TESTS 1000
+        -:   15:
+function main called 1 returned 100% blocks executed 96%
+        1:   16:int main()
+        -:   17:{
+        -:   18:		int card, players, postEffect, seedVal, i;
+        1:   19:		int ctr = 0, fail = 0, initial = 0, pass = 0, player = 0;
+        1:   20:		int k[10] = {adventurer, cutpurse, embargo, gardens, mine, minion, sea_hag, smithy, tribute, village};
+        -:   21:        struct gameState *game;
+        -:   22:
+        1:   23:        printf("--------------------Begin Random Test Smithy--------------------\n");
+call    0 returned 100%
+        -:   24:
+        -:   25:        //main loop
+     1001:   26:        for (i = 0; i < NUM_TESTS; i++)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -:   27:        {
+        -:   28:            //generate random players
+     1000:   29:            players = rand() % MAX_PLAYERS;
+call    0 returned 100%
+     1000:   30:            seedVal = rand();
+call    0 returned 100%
+        -:   31:
+     1000:   32:            game = malloc(sizeof(struct gameState));
+        -:   33:
+        -:   34:            //initialize game
+     1000:   35:            initializeGame(players, k, seedVal, game);
+call    0 returned 100%
+        -:   36:
+        -:   37:            //initialize valid state variables
+     1000:   38:            game->deckCount[player] = rand() % MAX_DECK;
+call    0 returned 100%
+     1000:   39:            game->discardCount[player] = rand() % MAX_DECK;
+call    0 returned 100%
+     1000:   40:            game->handCount[player] = rand() % MAX_HAND;
+call    0 returned 100%
+        -:   41:
+        -:   42:            //play the card
+   248048:   43:            for(card = 0; card < game->handCount[player]; card++)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
+        -:   44:            {
+   247048:   45:                if(game->hand[player][card] == gold || game->hand[player][card] == copper || game->hand[player][card] == silver){
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 99% (fallthrough)
+branch  3 taken 1%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+     1720:   46:                    ctr += 1; }
+        -:   47:            }
+        -:   48:
+        -:   49:            //Check the deck
+     1000:   50:            cardEffect(smithy,1,1,1,game,0,0);
+call    0 returned 100%
+     1000:   51:			postEffect = game->handCount[player];
+        -:   52:
+     1000:   53:            if(postEffect == initial + 2)
+branch  0 taken 0% (fallthrough)
+branch  1 taken 100%
+        -:   54:            {
+    #####:   55:                pass += 1;}
+        -:   56:            else
+        -:   57:            {
+     1000:   58:                fail += 1;}
+        -:   59:        }
+        -:   60:
+        1:   61:        printf("%d tests out of %d passed.\n", pass, NUM_TESTS);
+call    0 returned 100%
+        1:   62:		printf("--------------------Finished Random Test Smithy--------------------\n");
+call    0 returned 100%
+        -:   63:       
+        1:   64:        free(game);
+        -:   65:
+        1:   66:        return 0;
+        -:   67:}

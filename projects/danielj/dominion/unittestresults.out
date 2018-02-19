@@ -1,0 +1,167 @@
+
+STARTING unittest1 TEST.
+
+shuffle passed
+
+deck position passed
+
+deck passed
+
+testShuffle SUCCESSFULLY COMPLETED.
+
+FINISHED unittest1 TEST.
+
+
+STARTING unittest2 TEST.
+
+whoseTurn player 0 passed
+
+whoseTurn player 1 passed
+
+testWhoseTurn COMPLETED.
+
+FINISHED unittest2 TEST.
+
+
+STARTING unittest3 TEST.
+
+supplyCount '2' passed
+
+supplyCount '0' passed
+
+testSupplyCount SUCCESSFULLY COMPLETED.
+
+FINISHED unittest3 TEST.
+
+
+STARTING unittest4 TEST.
+
+getCost '2' passed
+
+getCost '5' passed
+
+testGetCost SUCCESSFULLY COMPLETED.
+
+FINISHED unittest4 TEST.
+
+
+STARTING cardtest1 TEST.
+
+smithyCard passed
+
+hand count '3' passed
+
+adventurer in hand passed
+
+council_room in hand passed
+
+feast in hand passed
+
+gardens not in hand passed
+
+deckCount '0' passed
+
+smithyCard in discard pile failed
+
+FINISHED cardtest1 TEST.
+
+
+STARTING cardtest2 TEST.
+
+adventurerCard passed
+
+handCount '2' failed
+
+FINISHED cardtest2 TEST.
+
+
+STARTING cardtest3 TEST.
+
+mineCard passed
+
+handCount '1' passed
+
+silver in hand passed
+
+testMineCard SUCCESSFULLY COMPLETED.
+
+FINISHED cardtest3 TEST.
+
+
+STARTING cardtest4 TEST.
+
+villageCard passed
+
+hand count '1' passed
+
+baron in hand passed
+
+numActions passed
+
+testVillageCard SUCCESSFULLY COMPLETED.
+
+FINISHED cardtest4 TEST.
+
+File 'unittest1.c'
+Lines executed:80.95% of 42
+Branches executed:66.67% of 30
+Taken at least once:36.67% of 30
+Calls executed:71.43% of 14
+Creating 'unittest1.c.gcov'
+
+File 'unittest2.c'
+Lines executed:85.19% of 27
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:78.57% of 14
+Creating 'unittest2.c.gcov'
+
+File 'unittest3.c'
+Lines executed:86.21% of 29
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:80.00% of 15
+Creating 'unittest3.c.gcov'
+
+File 'unittest4.c'
+Lines executed:84.62% of 26
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:76.92% of 13
+Creating 'unittest4.c.gcov'
+
+File 'cardtest1.c'
+Lines executed:72.73% of 66
+Branches executed:100.00% of 30
+Taken at least once:66.67% of 30
+Calls executed:58.33% of 24
+Creating 'cardtest1.c.gcov'
+
+File 'cardtest2.c'
+Lines executed:68.29% of 41
+Branches executed:50.00% of 16
+Taken at least once:31.25% of 16
+Calls executed:50.00% of 16
+Creating 'cardtest2.c.gcov'
+
+File 'cardtest3.c'
+Lines executed:81.82% of 33
+Branches executed:100.00% of 8
+Taken at least once:50.00% of 8
+Calls executed:71.43% of 14
+Creating 'cardtest3.c.gcov'
+
+File 'cardtest4.c'
+Lines executed:79.49% of 39
+Branches executed:100.00% of 10
+Taken at least once:50.00% of 10
+Calls executed:68.75% of 16
+Creating 'cardtest4.c.gcov'
+
+File 'dominion.c'
+Lines executed:47.77% of 561
+Branches executed:55.88% of 417
+Taken at least once:37.41% of 417
+Calls executed:36.84% of 95
+Creating 'dominion.c.gcov'
+

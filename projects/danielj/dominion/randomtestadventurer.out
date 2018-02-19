@@ -1,0 +1,10 @@
+--------------------Begin Random Test Adventurer--------------------
+Test fail: Unable to put 2 cards into players hand
+--------------------Exiting Random Test Adventurer--------------------
+File 'randomtestadventurer.c'
+Lines executed:66.67% of 45
+Branches executed:69.23% of 26
+Taken at least once:50.00% of 26
+Calls executed:60.87% of 23
+Creating 'randomtestadventurer.c.gcov'
+
