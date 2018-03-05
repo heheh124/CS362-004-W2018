@@ -1,13 +1,21 @@
 •	Cardtest1—Smithy
+o	Unique Bug Name: SmithyBug1
 o	Bug found: There is a failure in one of the tests which results in “hand count ‘3’ failed”.  This means that the current hand count is not equal to 3 after playing Smithy. 
 o	Test description: tests if the current hand count is 3.  If not, test will fail.
+o	Severity: Major
+o	Priority: High
 o	Bug cause: The smithyCard function has a for loop function that will only give up to 2 cards instead of 3.  I found the bug while running cardtest1.  The bug is from the following code within the smithyCard function:
 	for (i=0; i<2; i++)
+o	Reproducibility: Enter “make all” on FLIP then run cardtest1.
 
 
 •	Cardtest2—Adventurer
+o	Unique Bug Name: AdventurerBug1
 o	Bug found: There is a failure in one of the tests which results in “hand count ‘2’ failed”.  This means that the current hand count is not equal to 2 after playing Adventurer.
 o	Test description: tests if the current hand count is 2.  If not, test will fail.
+o	Severity: Major
+o	Priority: High
 o	Bug cause: The adventurerCard function has a while loop that will draw up to 3 treasure cards instead of 2.  I found the bug while running cardtest2. The bug is from the following code within the adventurerCard function:
 	while(drawntreasure < 3)
+o	Reproducibility: Enter “make all” on FLIP then run cardtest2.
 
